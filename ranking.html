@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inline CSS</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=yes"/>
+        <link rel="stylesheet" href="style.css">
+
+        <style>
+            #img{
+                position: static;
+                width: 195px;
+                height: 195px;
+            }
+
+            .no1img{
+                position: relative;
+                left: 320px;
+                width: 400px;
+                height: 210px;
+            }
+
+            .image1{
+               display: block;
+            }
+
+            .img_fade{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 365px;
+                height: 200px;
+                background: rgba(245, 250, 255, 0.9);
+                color: #111119;
+                font-size: 30px;
+                font-family: 'Courier New', Courier, monospace;
+
+                /*for centring text*/
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                opacity: 0; /*This will allow the text to be hidden at the beginning.*/
+                transition: opacity 0.25s; /*This makes it take 0.25s to fade.*/
+            }
+            /*This will allow the text to be shwon when hovered over.*/
+            .img_fade:hover {
+                opacity: 1;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a href=index.html>Home</a>
+                </li>
+                <li>
+                    <a href=review.html>Review</a>
+                </li>
+                <li>
+                    <a href=ranking.html>Ranking</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <br><br>
+        <h1 id="header">Ranking</h1>
+        <br><br><br>
+        <h5>Here is the number one song I have chosen</h5>
+        <br>
+        <p>Hover over image</p>
+
+        <main>
+            <br><br>
+            <div class="no1img">
+                <img class="image1" src= "images/no.1.png" alt="Number 5">
+                    <div class="img_fade">  <!--This is what will show when the image is being hovered over.-->
+                        <p>Shape of You <br>Ed Sheeran</p>
+                        </p>
+                    </div>
+            </div> 
+                
+            <br><br><br><br>
+            
+            <h5>Here is how I decided to rank the other 4</h5>
+            <br><br>
+            <img id="img" src= "images/love-yourself.jpg" alt="Love Yourself">
+            <img id="img" src= "images/old-town-road.jpeg" alt="Old Town Road">
+            <img id="img" src= "images/blinding-lights.png" alt="blinding Lights">
+            <img id="img" src= "images/gods-plan.jpg" alt="God's Plan">
+
+            <img src="images/rank.png" alt="Ranking of the four songs">
+
+              
+            
+        </main>
+
+        
+    </body>
+</html>
