@@ -21,7 +21,9 @@
                 height: 4px;
                 background: transparent;
                 transform-origin: left;
-                animation: animate 2s linear infinite;
+                -webkit-animation: animate 2s linear infinite;
+                -moz-animation: animate 2s linear infinite;
+                animation: animate 2s linear infinite; /*Makes line move for every*/
             }
             span:before
             {
@@ -40,7 +42,11 @@
                 position: absolute;
                 top: 40%;
                 left: 80%;
-                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -o-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); /*moves the circle to the  centre*/
                 width: 150px;
                 height: 150px;
                 background: transparent;
@@ -67,27 +73,55 @@
                 border-top: 3px solid grey;
                 border-right: 3px solid grey;
                 border-radius: 50%;
-                animation: animateCircle 2s linear infinite;
+                -webkit-animation: animateCircle 2s linear infinite;
+                -moz-animation: animateCircle 2s linear infinite;
+                animation: animateCircle 2s linear infinite; /*Makes line move for every*/
             }
 
+            /*Rotates the line around the circle*/
             @keyframes animateCircle{
+                    
+                    /*This is what happens when the animation begins.*/
                     0%
                     {
+                        -webkit-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        -o-transform: rotate(0deg);
+                        -ms-transform: rotate(0deg);
                         transform: rotate(0deg);
                     }
+
+                    /*This is what happens when the animation ends.*/
                     100%
                     {
+                        -webkit-transform: rotate(360deg);
+                        -moz-transform: rotate(360deg);
+                        -o-transform: rotate(360deg);
+                        -ms-transform: rotate(360deg);
                         transform: rotate(360deg);
                     }
             }
 
+            /*Rotates the little ball*/
             @keyframes animate{
+
+                    /*This is what happens when the animation begins.*/
                     0%
                     {
+                        -webkit-transform: rotate(45deg);
+                        -moz-transform: rotate(45deg);
+                        -o-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
                         transform: rotate(45deg);
                     }
+
+                    /*This is what happens when the animation ends.*/
                     100%
                     {
+                        -webkit-transform: rotate(405deg);
+                        -moz-transform: rotate(405deg);
+                        -o-transform: rotate(405deg);
+                        -ms-transform: rotate(405deg);
                         transform: rotate(405deg);
                     }
             }
